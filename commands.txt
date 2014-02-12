@@ -1,0 +1,26 @@
+ABC
+AD
+ADC
+AEBCD
+AED
+C C 3 max
+A C 4
+A C
+B B
+C C 30 weighted
+
+ABCD
+EBCDE
+ABCDEA
+A C
+D E
+A A
+A C 5
+C D 10
+E E 30 
+A C 5 max
+C D 10 max
+E E 30 max
+A C 5 weighted
+C D 10 weighted
+E E 30 weighted

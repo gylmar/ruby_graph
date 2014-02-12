@@ -1,0 +1,103 @@
+Author: Gylmar Moreno
+Date: 2/5/14
+Email: g2moreno@ucsd.edu
+
+We run solution.rb by passing in two parameters:
+        1) The graph file
+        2) The command file
+The program will proceed to run with the files if
+they are in the same directory. To run the program with everything 
+I have provided one would want to issue the command:
+
+    ruby solution.rb graph.txt commands.txt
+
+    or
+
+    ./solution.rb graph.txt commands.txt
+
+If you only want to see the solutions as formatted in the email,
+please uncomment the last line of the solution.rb file and run the 
+above command.
+
+------------------------------------------------------
+
+1) The graph input file
+
+     Assumptions on graph input file:
+       3-character lines where each character indicates the following
+           -First character is 'from' node
+           -Second character is 'to' node
+           -Third character numeric 'weight' (ie. distance) between nodes
+                although it should be able to work with multiple digit values
+
+     You can find the sample graph from the email in the 'graph.txt' file. Feel
+     free to run the program along with the provided 'command.txt' file.
+
+-------------------------------------------------------
+
+2) The command file
+
+    The solution.rb file will read commands on from the 'commands.txt' file
+to execute on the graph specified by the 'graph.txt' file. The commands 
+themselves will be implied by the number of arguments, separated by a space, on
+each line. 
+
+    The provided 'commands.txt' file includes the commands to print the solutions
+to the problems from the email. The remaining commands follow after the blank 
+line (note the ERROR that corresponds to the invalid input line). The remaining 
+commands execute the examples listed below. 
+
+
+Assumptions: Input strings and characters pertain to actual elements
+               contained in the graph. Some measures were taken to 
+               sanitize input but it is not completely exhaustive.
+
+The example inputs inputs can be found in the 'commands.txt' file,
+      please feel free to run it.
+
+The commands are as follows:
+
+    1 argument of a single string that consists of graph elements 
+      runs path_length() on the string.
+
+                    Example: ABCD
+                             EBCDE
+                             ABCDEA
+
+    2 arguments in the form of two characters will run shortest_path()
+      using the arguments as start and finish in that order.
+
+                    Example: A C
+                             D E
+                             A A
+
+    3 arguments in the form of 2 characters and 1 number (in that order)
+      will run num_trip() with the intention of finding the 'exact' number
+      of paths indicated by the number argument. It passes the arguments 
+      in the order presented.
+                    
+                    Example: A C 5
+                             C D 10
+                             E E 30
+
+    4 arguments in the form of 2 characters, 1 number and the string 
+      "max" will run num_trip() multiple times, with the intention
+      of finding the 'max' number of paths indicated. It passes
+      the arguments in the order presented.
+
+                    Example: A C 5 max
+                             C D 10 max
+                             E E 30 max
+
+    4 arguments in the form of 2 characters, a number and the string
+      "weighted" will run num_trips(), but under the consideration
+      of the edge weights (instead of treating the edge as unit length).
+        
+                    Example: A C 5 weighted
+                             C D 10 weighted
+                             E E 30 weighted
+
+Note: The commands are limited to one per line. Any other arguments 
+        will print an error and be discarded.
+
+Please email me if there are any quesions or concerns at g2moreno@ucsd.edu

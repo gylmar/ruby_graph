@@ -1,6 +1,10 @@
 Author: Gylmar Moreno
 Date: 2/5/14
-Email: g2moreno@ucsd.edu
+
+The following is a graph data structure implementation
+with path traversal functionality.
+
+----------------------------------------------------
 
 We run solution.rb by passing in two parameters:
         1) The graph file
@@ -14,10 +18,6 @@ I have provided one would want to issue the command:
     or
 
     ./solution.rb graph.txt commands.txt
-
-If you only want to see the solutions as formatted in the email,
-please uncomment the last line of the solution.rb file and run the 
-above command.
 
 ------------------------------------------------------
 
@@ -46,7 +46,6 @@ each line.
 to the problems from the email. The remaining commands follow after the blank 
 line (note the ERROR that corresponds to the invalid input line). The remaining 
 commands execute the examples listed below. 
-
 
 Assumptions: Input strings and characters pertain to actual elements
                contained in the graph. Some measures were taken to 
@@ -100,4 +99,4 @@ The commands are as follows:
 Note: The commands are limited to one per line. Any other arguments 
         will print an error and be discarded.
 
-Please email me if there are any quesions or concerns at g2moreno@ucsd.edu
+Please email me if there are any quesions or concerns at morenonomore@gmail.com
